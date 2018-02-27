@@ -1,0 +1,425 @@
+// Fonts
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,500");
+
+// Variables
+@import "variables";
+
+// Material Design Components Variables
+@import "@material/animation/variables";
+@import "@material/animation/functions";
+@import "@material/theme/color-palette";
+
+// Material Design Components
+@import "@material/elevation/mdc-elevation.scss";
+@import "@material/drawer/mdc-drawer.scss";
+@import "@material/toolbar/mdc-toolbar.scss";
+@import "@material/list/mdc-list.scss";
+@import "@material/layout-grid/mdc-layout-grid.scss";
+@import "@material/theme/mdc-theme.scss";
+@import "@material/typography/mdc-typography.scss";
+@import "@material/menu/mdc-menu.scss";
+@import "@material/select/mdc-select.scss";
+@import "@material/button/mdc-button.scss";
+@import "@material/textfield/mdc-text-field.scss";
+@import "@material/ripple/mdc-ripple.scss";
+@import "@material/card/mdc-card.scss";
+@import "@material/dialog/mdc-dialog.scss";
+@import "@material/checkbox/mdc-checkbox.scss";
+@import "@material/form-field/mdc-form-field.scss";
+@import "@material/grid-list/mdc-grid-list.scss";
+@import "@material/fab/mdc-fab.scss";
+@import "@material/radio/mdc-radio.scss";
+@import "@material/snackbar/mdc-snackbar.scss";
+@import "@material/linear-progress/mdc-linear-progress.scss";
+@import "@material/tabs/mdc-tabs.scss";
+@import "@material/rtl/_mixins.scss";
+
+.mdc-layout-grid-margin-desktop {
+    margin: 8px;
+}
+
+.mdc-layout-grid-gutter-desktop {
+    margin: 8px;
+}
+
+
+.switch-wrapper {
+    position: relative;
+}
+
+.switch-wrapper>div {
+    position: absolute;
+}
+
+.error-box {
+    text-align: center;
+    display: block;
+    color: #d50000;
+    padding: 10px 0; //box-shadow: 0px 0px 2px #d50000;
+}
+
+
+@media(max-width: 480px) and (min-width: 0px) {
+    .hide-on-phone {
+        display: none !important;
+    }
+}
+
+@media(max-width: 840px) and (min-width: 481px) {
+    .hide-on-tablet {
+        display: none !important;
+    }
+}
+
+@media(min-width: 841px) {
+    .hide-on-desktop {
+        display: none !important;
+    }
+}
+    
+.nav-collapse {
+    width: 70px;
+    transition: width 0.25s;
+    -webkit-transition: width 0.25s;
+
+    .logo, .link-name{
+        display: none;
+    }
+
+    .mdc-list-item{
+        padding-left: 20px;
+    }
+    .user-avatar{
+        padding-left: 10px;
+    }
+}
+
+
+/* Helper classes */
+
+.hidden {
+    display: none;
+}
+
+.pull-right {
+    float: right;
+}
+
+.pull-left {
+    float: left;
+}
+
+.fullwidth {
+    width: 100%;
+}
+
+
+
+
+
+
+
+
+
+/* Ensure layout covers the entire screen. */
+
+html {
+    height: 100%;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus input:-webkit-autofill,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+    -webkit-text-fill-color: inherit;
+    transition: background-color 5000s ease-in-out 0s;
+}
+
+.nav-active {
+    color: #FCB822 !important;
+    background-color: rgba(255, 255, 255, 0.1);
+
+    >i.material-icons {
+        color: #FCB822 !important;
+    }
+}
+
+
+
+
+
+
+
+
+/* Place drawer and content side by side. */
+
+body {
+    display: flex;
+    flex-direction: row;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    min-height: 100%;
+    width: 100%;
+}
+
+#app {
+    flex: 1;
+}
+
+.main {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* Stack toolbar and main on top of each other. */
+
+.content {
+    display: inline-flex;
+    flex-direction: column;
+    flex-grow: 1;
+    height: 100%;
+    box-sizing: border-box; //padding-left: 240px;
+}
+
+
+
+.mdc-toolbar__title {
+    font-size: 1rem;
+}
+
+
+
+
+
+/* Place drawer above toolbar shadow. */
+
+.mdc-permanent-drawer {
+    z-index: 2;
+}
+
+.login-logo {
+    text-align: center;
+    margin: 2em 0;
+    font-size: 28px;
+}
+
+
+
+
+
+
+
+
+
+/*.demo-main {
+    padding-left: 16px;
+}
+
+.extra-content-wrapper {
+    padding: 10px;
+}
+
+#extra-wide-content {
+    width: 200vw;
+}
+
+#extra-tall-content {
+    height: 200vh;
+}*/
+
+.logo {
+    margin: 0 2rem;
+}
+
+.brand {
+    //min-height: 80px;
+    border-bottom: none;
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.08);
+}
+
+.knob-ui {
+    text-align: center;
+}
+
+.line-dashboard-container {
+    border-radius: 8px;
+    border: 1px solid rgba(0, 0, 0, 0.16);
+    padding: 15px 20px;
+}
+
+.material-icons.dropdown {
+    vertical-align: middle;
+}
+
+.menu-filters {
+    display: inline-block;
+    margin-right: 8px;
+}
+
+.reports-list li {
+    cursor: pointer;
+
+    div {
+        background-color: $mdc-theme-primary;
+    }
+}
+
+.app-fab--absolute {
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+}
+
+@media(min-width: 1024px) {
+    .app-fab--absolute {
+        bottom: 1.5rem;
+        right: 1.5rem;
+    }
+}
+
+.data-table {
+    width: 100%;
+    overflow-x: scroll;
+}
+
+button:disabled {
+    opacity: .38;
+    cursor: default;
+    pointer-events: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.mdc-radio~label {
+    cursor: pointer;
+}
+
+.mdc-text-field--disabled {
+    >i.mdc-text-field__icon {
+        opacity: 0.3;
+    }
+}
+
+.mdc-select--sm {
+    height: 48px;
+    margin-bottom: 4px;
+
+    select {
+        height: 48px;
+    }
+}
+
+.profile-pic {
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+}
+
+.profile-link {
+    padding-top: 15px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+     :hover {
+        text-decoration: underline;
+    }
+}
+
+.toolbar-more {
+    padding: 10px;
+}
+
+.box {
+    @extend .mdc-elevation--z1;
+}
+
+.box-content {
+    padding: 10px 8px;
+    overflow: hidden;
+}
+
+.app-fab--absolute {
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    z-index: 100;
+}
+
+.mdc-linear-progress {
+    @include mdc-linear-progress-bar-color(#FFFFFF)
+}
+
+.panels .panel {
+    display: none;
+}
+
+.panels .panel.active {
+    display: block;
+}
+
+.form-error {
+    opacity: 1;
+    color: #d50000 !important;
+}
+
+button.pull-right+button.pull-right {
+    margin-right: 1rem;
+}
+
+button.pull-left+button.pull-left {
+    margin-left: 1rem;
+}
+
+.loader {
+    @include mdc-linear-progress-bar-color($material-color-blue-a700);
+    @include mdc-linear-progress-buffer-color($material-color-blue-50);
+}
+
+//fix for misaligned icons on buttons
+.mdc-button__icon.material-icons {
+    line-height: inherit !important;
+}
+
+.linechart {
+    position: relative;
+    padding: 0.5em;
+    width: 600px;
+    height: 400px;
+
+    @media (min-width: 0px) and (max-width: 480px){
+        width: auto;
+        height: auto;
+    }
+}
+
+.menu-filters, #btn_filter {
+
+    width: 100%;
+
+    >button {
+
+        width: 100%;
+    }
+}
+
+.c3-axis-x {
+    margin-bottom: 10px;
+}

@@ -1,0 +1,20 @@
+$mdc-theme-primary: #006093; // blue
+//$mdc-theme-secondary: #ffab40; // Orange A200
+$mdc-theme-background: #fff; // White
+
+$mdc-theme-primary-light: #ffffff; // White Text Color
+$mdc-theme-primary-dark: #006093; // Purple 800
+$mdc-theme-secondary-light: #ffd180; // Orange A100
+$mdc-theme-secondary-dark: #424242; // Black Text Color
+
+$mdc-layout-grid-default-margin: (
+  desktop: 16px,
+  tablet: 12px,
+  phone: 8px
+) !default;
+
+$mdc-layout-grid-default-gutter: (
+  desktop: 12px,
+  tablet: 8px,
+  phone: 4px
+) !default;
